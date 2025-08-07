@@ -3,7 +3,7 @@ import './App.css';
 
 // config react router 
 
-import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { BrowserRouter,Navigate,Route,Routes } from 'react-router-dom';
 
 //pages
 import Home from './pages/Home';
@@ -33,9 +33,10 @@ function App() {
           <Route path='/products/:id/info' element={<Info/>}/>
           {/* rota dinâmica */}
           <Route path='/products/:id' element={<Product/>}/>
-          
           {/* Search */}
           <Route path='/search' element={<Search/>}/>
+          {/* Redirect  */}
+          <Route path='/company' element={<Navigate to="/about"/>}/>
           {/* No match route  */}
           <Route path='*' element={<NotFound/>}/>
         </Routes>
