@@ -18,7 +18,7 @@ export function useFetch(url) {
     if (method === "POST") {
       setConfig({
         method,
-        Headers: {
+        headers: {
           "content-type": "application/json",
         },
         body: JSON.stringify(data),
